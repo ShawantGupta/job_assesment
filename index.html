@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>Age</h3>
+            <input id="first" name="Age" type="number ">
+            <h3>LodgingRevenue</h3><br><input id="second" name="LodgingRevenue" required="required">
+            <h3>OtherRevenue</h3><input id="third" name="OtherRevenue" required="required">
+            <h3>AverageLeadTime</h3><br><input id="fourth" name="AverageLeadTime" required="required">
+	    <h3>RoomNights</h3><br><input id="fourth" name="RoomNights" required="required">
+	    <h3>PersonsNights</h3><br><input id="fourth" name="PersonsNights" required="required">
+	    <h3>DaysSinceCreation</h3><br><input id="fourth" name="DaysSinceCreation" required="required">
+	    <h3>DaysSinceLastStay</h3><br><input id="fourth" name="DaysSinceLastStay" required="required">
+	    <h3>DaysSinceFirstStay</h3><br><input id="fourth" name="DaysSinceFirstStay" required="required">
+	    <h3>SRAwayFromElevator</h3><br><input id="fourth" name="SRAwayFromElevator" required="required">
+	    <h3>SRNoAlcoholInMiniBar</h3><br><input id="fourth" name="SRNoAlcoholInMiniBar" required="required">
+	    <h3>SRQuietRoom</h3><br><input id="fourth" name="SRQuietRoom" required="required">
+	    <h3>SRHighFloor</h3><br><input id="fourth" name="SRHighFloor" required="required">
+	    <h3>SRLowFloor</h3><br><input id="fourth" name="SRLowFloor" required="required">
+	    <h3>SRAccessibleRoom</h3><br><input id="fourth" name="SRAccessibleRoom" required="required">
+	    <h3>SRMediumFloor</h3><br><input id="fourth" name="SRMediumFloor" required="required">
+	    <h3>SRBathtub</h3><br><input id="fourth" name="SRBathtub" required="required">
+	    <h3>SRShower</h3><br><input id="fourth" name="SRShower" required="required">	
+	    <h3>SRCrib</h3><br><input id="fourth" name="SRCrib" required="required">
+ 	    <h3>SRKingSizeBed</h3><br><input id="fourth" name="SRKingSizeBed" required="required">
+	    <h3>SRTwinBed</h3><br><input id="fourth" name="SRTwinBed" required="required">
+	    <h3>SRNearElevator</h3><br><input id="fourth" name="SRNearElevator" required="required">
+            <h3>Nationality</h3><br><select name="Nationality" id="fuel" required="required">
+                <option value="Nationality_ABW">Nationality_ABW</option>
+		<option value="Nationality_AGO">Nationality_AGO</option>
+                <option value="Nationality_AIA,">Nationality_AIA,</option>
+                <option value="Nationality_AND">Nationality_AND</option>
+		<option value="Nationality_ARE">Nationality_ARE</option>
+		<option value="Nationality_ALB">Nationality_ALB</option>
+                <option value="Nationality_ARG">Nationality_ARG</option>
+                <option value="Nationality_ARM">Nationality_ARM</option>
+		<option value="Nationality_ASM">Nationality_ASM</option>
+		<option value="Nationality_ATF">Nationality_ATF</option>
+		<option value="Nationality_ATA">Nationality_ATA</option>
+                <option value="Nationality_ATG">Nationality_ATG</option>
+                <option value="Nationality_AUS">Nationality_AUS</option>
+		<option value="Nationality_AUT">Nationality_AUT</option>
+		<option value="Nationality_AZE">Nationality_AZE</option>
+		<option value="Nationality_BEL">Nationality_BEL</option>
+                <option value="Nationality_BEN">Nationality_BEN</option>
+                <option value="Nationality_BGD">Nationality_BGD</option>
+		<option value="Nationality_BGR">Nationality_BGR</option>
+		<option value="Nationality_BHR">Nationality_BHR</option>
+		<option value="Nationality_BHS">Nationality_BHS</option>
+                <option value="Nationality_BIH,">Nationality_BIH,</option>
+                <option value="Nationality_BLR">Nationality_BLR</option>
+		<option value="Nationality_BOL">Nationality_BOL</option>
+		<option value="Nationality_BRA">Nationality_BRA</option>
+		<option value="Nationality_BRB">Nationality_BRB</option>
+                <option value="Nationality_BWA,">Nationality_BWA,</option>
+                <option value="Nationality_CAF">Nationality_CAN</option>	
+		<option value="Nationality_CAN">Nationality_ALB</option>
+		<option value="Nationality_CHE">Nationality_CHE</option>
+		<option value="Nationality_CHL">Nationality_CHL</option>
+                <option value="Nationality_CHN,">Nationality_CHN,</option>
+                <option value="Nationality_CIV">Nationality_CIV</option>
+		<option value="Nationality_CMR">Nationality_CMR</option>
+		<option value="Nationality_COD">Nationality_COD</option>
+		<option value="Nationality_COL">Nationality_COL</option>
+                <option value="Nationality_COM,">Nationality_COM,</option>
+                <option value="Nationality_CPV">Nationality_CPV</option>
+		<option value="Nationality_CRI">Nationality_CRI</option>
+		<option value="Nationality_CUB">Nationality_CUB</option>
+		<option value="Nationality_CYM">Nationality_CYM</option>
+                <option value="Nationality_CYP,">Nationality_CYP,</option>
+                <option value="Nationality_CZE">Nationality_CZE</option>
+		<option value="Nationality_DEU">Nationality_DEU</option>
+		<option value="Nationality_DMA">Nationality_DMA</option>
+		<option value="Nationality_DNK">Nationality_DNK</option>
+                <option value="Nationality_DOM,">Nationality_DOM,</option>
+                <option value="Nationality_DZA">Nationality_DZA</option>
+		<option value="Nationality_ECU">Nationality_ECU</option>
+		<option value="Nationality_EGY">Nationality_EGY</option>
+		<option value="Nationality_ERI">Nationality_ERI</option>
+                <option value="Nationality_ESP,">Nationality_ESP,</option>
+                <option value="Nationality_EST">Nationality_EST</option>
+		<option value="Nationality_ETH">Nationality_ETH</option>
+		<option value="Nationality_FTN">Nationality_FTN</option>
+		<option value="Nationality_GIN">Nationality_GIN</option>
+                <option value="Nationality_GNB,">Nationality_GNB,</option>
+                <option value="Nationality_GNQ">Nationality_GNQ</option>
+		<option value="Nationality_GRC">Nationality_GRC</option>
+		<option value="Nationality_GTM">Nationality_GTM</option>
+		<option value="Nationality_GUF">Nationality_GUF</option>
+                <option value="Nationality_GUY,">Nationality_GUY,</option>
+                <option value="Nationality_HKG">Nationality_HKG</option>
+		<option value="Nationality_HRV">Nationality_HRV</option>
+		<option value="Nationality_HIT">Nationality_HTI</option>
+		<option value="Nationality_HUN">Nationality_HUN</option>
+                <option value="Nationality_IDN,">Nationality_IDN,</option>
+                <option value="Nationality_IND">Nationality_IND</option>
+		<option value="Nationality_IOT">Nationality_IOT</option>
+		<option value="Nationality_IRL">Nationality_IRL</option>
+		<option value="Nationality_IRN">Nationality_IRN</option>
+                <option value="Nationality_IRQ">Nationality_IRQ</option>
+		<option value="Nationality_ISL">Nationality_ISL</option>
+		<option value="Nationality_ISR">Nationality_ISR</option>
+		<option value="Nationality_ITA">Nationality_ITA</option>
+                <option value="Nationality_JAM,">Nationality_JAM,</option>
+                <option value="Nationality_JEY">Nationality_JEY</option>
+		<option value="Nationality_JOR">Nationality_JOR</option>
+		<option value="Nationality_JPN">Nationality_JPN</option>
+		<option value="Nationality_KAZ">Nationality_KAZ</option>
+                <option value="Nationality_KEN">Nationality_KEN</option>
+                <option value="Nationality_KGZ">Nationality_KGZ</option>
+		<option value="Nationality_FJI">Nationality_FJI</option>
+		<option value="Nationality_FLK">Nationality_FLK</option>
+		<option value="Nationality_FRA">Nationality_FRA</option>
+                <option value="Nationality_FRO">Nationality_FRO</option>
+		<option value="Nationality_GAB">Nationality_GAB</option>
+		<option value="Nationality_GBR">Nationality_GBR</option>
+		<option value="Nationality_GEO">Nationality_GEO</option>
+                <option value="Nationality_GHA">Nationality_GHA,</option>
+                <option value="Nationality_GIB">Nationality_GIB</option>
+		<option value="Nationality_KIR">Nationality_KIR</option>
+		<option value="Nationality_KNA">Nationality_KNA</option>
+		<option value="Nationality_KOR">Nationality_KOR</option>
+                <option value="Nationality_KWT,">Nationality_KWT,</option>
+                <option value="Nationality_LAO">Nationality_LAO</option>
+		<option value="Nationality_LBN">Nationality_LBN</option>
+		<option value="Nationality_LBY">Nationality_LBY</option>
+		<option value="Nationality_LCA">Nationality_LCA</option>
+                <option value="Nationality_LVA">Nationality_LVA</option>
+		<option value="Nationality_LUX">Nationality_LUX</option>
+		<option value="Nationality_MAR">Nationality_MAR</option>
+		<option value="Nationality_LTU">Nationality_LTU</option>
+                <option value="Nationality_LKA,">Nationality_LKA,</option>
+                <option value="Nationality_LTE">Nationality_LTE</option>
+		<option value="Nationality_MCO">Nationality_MCO</option>
+		<option value="Nationality_MDG">Nationality_MDG</option>
+		<option value="Nationality_MDV">Nationality_MDV</option>
+                <option value="Nationality_MEX,">Nationality_MEX</option>
+                <option value="Nationality_MKD">Nationality_MKD</option>
+		<option value="Nationality_MLT">Nationality_MLT</option>
+		<option value="Nationality_MMR">Nationality_MMR</option>
+		<option value="Nationality_MNE">Nationality_MNE</option>
+                <option value="Nationality_MOZ">Nationality_MOZ</option>
+		<option value="Nationality_MRT">Nationality_MRT</option>
+		<option value="Nationality_MUS">Nationality_MUS</option>
+		<option value="Nationality_NPL">Nationality_NPL</option>
+                <option value="Nationality_MWI,">Nationality_MWI,</option>
+                <option value="Nationality_MYS">Nationality_MYS</option>
+		<option value="Nationality_NAM">Nationality_NAM</option>
+		<option value="Nationality_NCL">Nationality_NCL</option>
+		<option value="Nationality_NGA">Nationality_NGA</option>
+                <option value="Nationality_NIC,">Nationality_NIC,</option>
+                <option value="Nationality_NLD">Nationality_NLD</option>
+		<option value="Nationality_NOR">Nationality_NOR</option>
+		<option value="Nationality_NRU">Nationality_NRU</option>
+		<option value="Nationality_PNG">Nationality_PNG</option>
+                <option value="Nationality_POL">Nationality_POL</option>
+		<option value="Nationality_PRI">Nationality_PRI</option>
+		<option value="Nationality_PRT">Nationality_PRT</option>
+		<option value="Nationality_PRY">Nationality_PRY</option>
+                <option value="Nationality_NZL">Nationality_NZL,</option>
+                <option value="Nationality_OMN">Nationality_OMN</option>
+		<option value="Nationality_PAK">Nationality_PAK</option>
+		<option value="Nationality_PAN">Nationality_PAN</option>
+		<option value="Nationality_PCN">Nationality_PCN</option>
+                <option value="Nationality_SDN,">Nationality_SDN,</option>
+                <option value="Nationality_PER">Nationality_PER</option>
+		<option value="Nationality_PHL">Nationality_PHL</option>
+		<option value="Nationality_PYF">Nationality_PYF</option>
+		<option value="Nationality_QAT">Nationality_QAT</option>
+                <option value="Nationality_ROU">Nationality_ROU</option>
+		<option value="Nationality_RUS">Nationality_RUS</option>
+		<option value="Nationality_RWA">Nationality_RWA</option>
+		<option value="Nationality_SAU">Nationality_SAU</option>
+                <option value="Nationality_SEN,">Nationality_SEN</option>
+                <option value="Nationality_SYC">Nationality_SYC</option>
+		<option value="Nationality_SYR">Nationality_SYR</option>
+		<option value="Nationality_TCD">Nationality_TCD</option>
+		<option value="Nationality_TGO">Nationality_TGO</option>
+                <option value="Nationality_THA,">Nationality_THA,</option>
+                <option value="Nationality_TJK">Nationality_TJK</option>
+		<option value="Nationality_TKM">Nationality_TKM</option>
+		<option value="Nationality_TMP">Nationality_TMP</option>
+		<option value="Nationality_TON">Nationality_TON</option>
+                <option value="Nationality_SGP">Nationality_SGP</option>
+		<option value="Nationality_SLV">Nationality_SLV</option>
+		<option value="Nationality_SMR">Nationality_SMR</option>
+		<option value="Nationality_SOM">Nationality_SOM</option>
+                <option value="Nationality_SPM,">Nationality_SPM,</option>
+                <option value="Nationality_SRB">Nationality_SRB</option>
+		<option value="Nationality_STP">Nationality_STP</option>
+		<option value="Nationality_SUR">Nationality_SUR</option>
+		<option value="Nationality_SVK">Nationality_SVK</option>
+                <option value="Nationality_SVN,">Nationality_SVN,</option>
+                <option value="Nationality_SWE">Nationality_SWE</option>
+		<option value="Nationality_SWZ">Nationality_SWZ</option>
+		<option value="Nationality_TUN">Nationality_TUN</option>
+		<option value="Nationality_TUR">Nationality_TUR</option>
+                <option value="Nationality_TWN">Nationality_TWN</option>
+		<option value="Nationality_TZA">Nationality_TZA</option>
+		<option value="Nationality_UGA">Nationality_UGA</option>
+		<option value="Nationality_UKR">Nationality_UKR</option>
+                <option value="Nationality_UMI,">Nationality_UMI,</option>
+                <option value="Nationality_URY">Nationality_URY</option>
+		<option value="Nationality_USA">Nationality_USA</option>
+		<option value="Nationality_UZB">Nationality_UZB</option>
+		<option value="Nationality_VCT">Nationality_VCT</option>
+                <option value="Nationality_VEN,">Nationality_VEN,</option>
+                <option value="Nationality_VIR">Nationality_VIR</option>
+		<option value="Nationality_VNM">Nationality_VNM</option>
+		<option value="Nationality_WLF">Nationality_WLF</option>
+		<option value="Nationality_WSM">Nationality_WSM</option>  
+                <option value="Nationality_YEM">Nationality_YEM</option>
+		<option value="Nationality_ZAF">Nationality_ZAF</option>
+		<option value="Nationality_ZWE">Nationality_ZWE</option>
+            </select>
+            <h3>DistributionChannel</h3><br><select name="DistributionChannel" id="resea" required="required">
+                <option value="DistributionChannel_Corporate">DistributionChannel_Corporater</option>
+                <option value="DistributionChannel_Direct">DistributionChannel_Direct</option>
+		<option value="DistributionChannel_ElectronicDistribution">DistributionChannel_ElectronicDistribution</option>
+		<option value="DistributionChannel_TravelAgentOperator">DistributionChannel_TravelAgentOperator</option>
+            </select>
+            <h3>MarketSegment</h3><br><select name="MarketSegment" id="research" required="required">
+                <option value="MarketSegment_Aviation">MarketSegment_Aviation</option>
+                <option value="MarketSegment_Complementary">MarketSegment_Complementary</option>
+		<option value="MarketSegment_Corporate">MarketSegment_Corporate</option>
+		<option value="MarketSegment_Direct">MarketSegment_Direct</option>
+		<option value="MarketSegment_Groups">MarketSegment_Groupsn</option>
+		<option value="MarketSegment_Other">MarketSegment_Other</option>
+		<option value="MarketSegment_TravelAgentOperator">MarketSegment_TravelAgentOperator</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Customer_check_in</button>
+            <br>
+
+               
+               
+               
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
